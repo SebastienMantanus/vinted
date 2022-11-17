@@ -8,9 +8,9 @@ const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "dqs1vigmk",
-  api_key: "914732917194933",
-  api_secret: "cNcmTPW-J1KS1wa7y5Hbg8FPSeU",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET_KEY,
   secure: true,
 });
 // convertisseur en Base64 de l'avatar
