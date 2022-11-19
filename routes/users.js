@@ -53,7 +53,7 @@ router.post("/user/signup", fileUpload(), async (req, res) => {
 
         if (req.files) {
           // on remonte l'avatar sur Cloudinary
-          const forlder = newUser._id;
+          const folder = newUser._id;
           const avatar = convertToBase64(req.files.avatar);
           const ticket = await cloudinary.uploader.upload(avatar, {
             folder: `/vinted/users/${folder}`,
